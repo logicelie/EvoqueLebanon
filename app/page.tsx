@@ -24,11 +24,17 @@ export default function Home() {
             <div className="eyebrow">{h.hero.eyebrow}</div>
             <h1>{h.hero.title.map((t) => <span key={t} style={{ display: "block" }}>{t}</span>)}</h1>
             <p>{h.hero.text}</p>
-            <div className="offers">
-              {h.hero.offers.map((o) => <div key={o.big}><strong>{o.big}</strong><span>{o.small}</span></div>)}
-            </div>
-            <div className="eyebrow">Offer ends in</div>
-            <Countdown to={h.hero.countdownTo} />
+            {h.hero.offers.length > 0 && (
+              <div className="offers">
+                {(h.hero.offers as { big: string; small: string }[]).map((o) => <div key={o.big}><strong>{o.big}</strong><span>{o.small}</span></div>)}
+              </div>
+            )}
+            {h.hero.countdownTo && (
+              <>
+                <div className="eyebrow">Offer ends in</div>
+                <Countdown to={h.hero.countdownTo} />
+              </>
+            )}
             <Link href={h.hero.cta.href} className="btn btn-light">{h.hero.cta.label}</Link>
             <div className="hero-foot">{h.hero.footnote}</div>
           </div>

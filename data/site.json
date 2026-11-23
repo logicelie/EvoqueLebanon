@@ -12,7 +12,6 @@
     "instagram": "https://www.instagram.com/evoquelebanon/"
   },
   "announcements": [
-    "Buy 3 Get 1 Free",
     "Free delivery across Lebanon on orders $100+",
     "Cash on delivery available"
   ],
@@ -140,30 +139,17 @@
   ],
   "home": {
     "hero": {
-      "image": "files/black-friday-early-access-hero-2026.png",
-      "eyebrow": "Black Friday / Lebanon",
+      "image": "files/WhatsApp_Image_2025-06-29_at_22.11.13_5.jpg",
+      "eyebrow": "Evoque Professional / Lebanon",
       "title": [
-        "Black Friday.",
-        "Early Access."
+        "Salon hair care.",
+        "Now in Lebanon."
       ],
-      "text": "Our best prices of the year, before everyone else. Salon-grade, sulfate free professional hair care — now delivered across Lebanon.",
-      "offers": [
-        {
-          "big": "20% OFF",
-          "small": "Single products"
-        },
-        {
-          "big": "30% OFF",
-          "small": "Sets and bundles"
-        },
-        {
-          "big": "40% OFF",
-          "small": "Orders over $400"
-        }
-      ],
-      "countdownTo": "2026-11-30T23:59:00+02:00",
+      "text": "Salon-grade, sulfate free professional hair care, delivered across Lebanon.",
+      "offers": [],
+      "countdownTo": "",
       "cta": {
-        "label": "Shop early access",
+        "label": "Shop all products",
         "href": "/collections/all"
       },
       "footnote": "Free delivery across Lebanon over $100 / Cash on delivery"
@@ -173,7 +159,7 @@
       "image": "files/hair-quiz-banner.png",
       "title": "Not sure where to start?",
       "subtitle": "A few questions to your salon routine.",
-      "text": "Get a personal hair analysis and a four-step Evoque routine, with 10% off when you finish.",
+      "text": "Get a personal hair analysis and a four-step Evoque routine.",
       "cta": {
         "label": "Take the hair quiz",
         "href": "/pages/hair-quiz"

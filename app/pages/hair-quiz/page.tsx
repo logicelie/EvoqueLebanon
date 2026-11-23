@@ -53,7 +53,6 @@ export default function HairQuiz() {
                 <Link href={r.href} className="btn btn-dark btn-sm">Shop {r.name}</Link>
               </div>
             ))}
-            <p className="small">Use code <strong>QUIZ10</strong> for 10% off your first order.</p>
             <button className="link" onClick={() => { setStep(0); setVotes([]); }}>Retake the quiz</button>
           </>
         )}

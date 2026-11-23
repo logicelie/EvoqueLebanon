@@ -25,7 +25,7 @@ Commit these files so production never depends on the US site. Re-run `npm run s
 
 ## Things to edit before launch
 
-- **`data/site.json`**: WhatsApp number, phone, email, Instagram, announcement bar, menus, homepage sections (hero offer and countdown date, featured product, collection tiles). `priceMultiplier` scales every USD price; `currency` can be changed.
+- **`data/site.json`**: WhatsApp number, phone, email, Instagram, announcement bar, menus, homepage sections (hero (add `offers` and `countdownTo` to run a promotion), featured product, collection tiles). `priceMultiplier` scales every USD price; `currency` can be changed.
 - **`data/overrides.json`**: Lebanon-specific changes that survive re-syncs:
   - `"hidden": ["product-handle"]` hides products you don't stock
   - `"unavailable": ["product-handle"]` marks them sold out
