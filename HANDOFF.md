@@ -20,7 +20,7 @@ See `README.md` for structure, the sync script and which files to edit.
 - Home page with the original's sections in order; product, collection, search, cart and checkout pages; hair quiz; Our Story, About, Vision & Mission, Delivery & Returns, Partners, Contact.
 - Four guide pages and nine blog articles imported once into `data/content.json` (not refreshed by sync).
 - `data/redirects.json`: old product and page links mapped to current ones.
-- WhatsApp number set to `9613979313` (`+961 3 979 313`) in `data/site.json`. Email `hello@evoquelebanon.com` confirmed by the owner.
+- WhatsApp number set to `9613979313` (`+961 3 979 313`) in `data/site.json`. Email `hello@evoquelebanon.com` and Instagram `@evoquelebanon` (https://www.instagram.com/evoquelebanon/) confirmed by the owner.
 - Promotions removed: no "Buy 3 Get 1 Free", no Black Friday hero or countdown, no `QUIZ10`. The hero is now a Smart Keratin photo with "Salon hair care. Now in Lebanon." To run a promotion later, fill `home.hero.offers` and `home.hero.countdownTo` in `data/site.json`.
 - Verified locally: clean `npm ci && npm run build` generates 171 pages; all 464 internal links and images resolve; no horizontal overflow on desktop or mobile; add to cart through to the checkout form works. The final hand-off to WhatsApp was not tested with a real order.
 
@@ -35,7 +35,6 @@ Live at https://evoque-lebanon.vercel.app (project `evoque-lebanon`, team `elieh
 
 ## Still needed from the owner
 
-- Instagram handle (the site links to `@evoquelebanon`, unconfirmed).
 - Delivery terms. The site assumes a $4 fee, free delivery over $100, 1 to 3 business days, and 14-day returns on unopened items. The fee and threshold are `DELIVERY_FEE` and `FREE_OVER` in `app/cart/page.tsx`; the wording is in `data/site.json`, `data/pages.json` and `app/products/[handle]/page.tsx`.
 - The GoDaddy domain name. To link it: add the domain (apex and `www`) under the Vercel project's Settings, Domains; in GoDaddy DNS set the A record for `@` and the CNAME for `www` to the values Vercel shows; turn off GoDaddy forwarding; leave MX records alone.
 
