@@ -1,0 +1,120 @@
+/* Evoque Lebanon portal. Mobile first; sidebar from 900px. Z-index scale: 10 bars, 20 sticky actions, 50 dialog. */
+.adm { --ink: #18181b; --mut: #52525b; --line: #e4e4e7; --bg: #fafafa; --card: #fff; --ok: #166534; --okbg: #dcfce7; --warn: #92400e; --warnbg: #fef3c7; --bad: #b42318; --badbg: #fee4e2; --info: #1e40af; --infobg: #dbeafe;
+  min-height: 100dvh; background: var(--bg); color: var(--ink); font: 400 16px/1.5 Montserrat, system-ui, sans-serif; }
+.adm *, .adm *::before, .adm *::after { box-sizing: border-box; }
+.adm a { color: inherit; }
+.adm h1 { font: 600 22px/1.25 "Bricolage Grotesque", Montserrat, sans-serif; margin: 0; }
+.adm h2 { font: 600 16px/1.3 Montserrat, sans-serif; margin: 0 0 12px; }
+.adm :focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
+.adm .mut { color: var(--mut); }
+.adm .sm { font-size: 13px; }
+.adm .num { font-variant-numeric: tabular-nums; }
+.adm .right { text-align: right; }
+
+.adm-top { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; background: var(--ink); color: #fff; }
+.adm-top strong { font: 600 15px Montserrat, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+.adm-top .who { font-size: 13px; color: #d4d4d8; }
+.adm-nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; background: #fff; border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom); }
+.adm-nav a { flex: 1; min-height: 56px; display: grid; place-items: center; align-content: center; gap: 2px; font-size: 11px; font-weight: 600; color: var(--mut); text-decoration: none; position: relative; }
+.adm-nav a[aria-current="page"] { color: var(--ink); }
+.adm-nav a[aria-current="page"]::before { content: ""; position: absolute; top: 0; left: 25%; right: 25%; height: 3px; background: var(--ink); border-radius: 0 0 3px 3px; }
+.adm-nav .dot { position: absolute; top: 6px; left: calc(50% + 6px); min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: var(--bad); color: #fff; font-size: 11px; line-height: 18px; text-align: center; }
+.adm-main { padding: 16px 16px 96px; max-width: 1180px; margin: 0 auto; }
+.adm-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+
+@media (min-width: 900px) {
+  .adm-shell { display: grid; grid-template-columns: 220px 1fr; min-height: calc(100dvh - 44px); }
+  .adm-nav { position: sticky; top: 44px; height: calc(100dvh - 44px); flex-direction: column; border-top: 0; border-right: 1px solid var(--line); padding: 12px; gap: 4px; }
+  .adm-nav a { flex: none; min-height: 44px; grid-auto-flow: column; justify-content: start; gap: 12px; padding: 0 12px; font-size: 14px; border-radius: 8px; }
+  .adm-nav a:hover { background: #f4f4f5; }
+  .adm-nav a[aria-current="page"] { background: #f4f4f5; }
+  .adm-nav a[aria-current="page"]::before { display: none; }
+  .adm-nav .dot { position: static; margin-left: auto; }
+  .adm-main { padding: 28px 32px 48px; margin: 0; width: 100%; }
+}
+
+.adm .card { display: block; text-align: left; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.adm .stack { display: grid; gap: 16px; }
+.adm .cols { display: grid; gap: 16px; }
+@media (min-width: 900px) { .adm .cols { grid-template-columns: 1.6fr 1fr; align-items: start; } .adm .cols2 { grid-template-columns: 1fr 1fr; } }
+.adm .kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+@media (min-width: 900px) { .adm .kpis { grid-template-columns: repeat(4, 1fr); } }
+.adm .kpi { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; text-decoration: none; display: block; }
+.adm a.kpi:hover { border-color: #a1a1aa; }
+.adm .kpi .l { font-size: 12px; font-weight: 600; color: var(--mut); text-transform: uppercase; letter-spacing: .04em; }
+.adm .kpi .v { font: 600 24px/1.3 "Bricolage Grotesque", Montserrat, sans-serif; font-variant-numeric: tabular-nums; }
+.adm .kpi .s { font-size: 12px; color: var(--mut); }
+
+.adm .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid var(--ink); background: var(--ink); color: #fff; font: 600 14px Montserrat, sans-serif; cursor: pointer; text-decoration: none; transition: opacity .15s, background .15s; letter-spacing: 0; text-transform: none; }
+.adm .btn:hover { opacity: .88; }
+.adm .btn:disabled { opacity: .5; cursor: progress; }
+.adm .btn.ghost { background: #fff; color: var(--ink); border-color: #d4d4d8; }
+.adm .btn.ghost:hover { background: #f4f4f5; opacity: 1; }
+.adm .btn.danger { background: #fff; color: var(--bad); border-color: #f1aaa3; }
+.adm .btn.ok { background: var(--ok); border-color: var(--ok); }
+.adm .btn.block { width: 100%; }
+.adm .btn.sm { min-height: 36px; padding: 0 12px; font-size: 13px; }
+.adm .btnrow { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.adm label.f { display: grid; gap: 6px; font-size: 13px; font-weight: 600; color: var(--mut); }
+.adm input, .adm select, .adm textarea { font: 400 16px Montserrat, sans-serif; color: var(--ink); min-height: 44px; padding: 10px 12px; border: 1px solid #d4d4d8; border-radius: 10px; background: #fff; width: 100%; }
+.adm textarea { min-height: 72px; }
+.adm .form { display: grid; gap: 14px; }
+.adm .grid2 { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
+.adm .filters { display: flex; gap: 10px; flex-wrap: wrap; align-items: end; margin-bottom: 16px; }
+.adm .filters > * { flex: 1 1 140px; }
+.adm .filters .btn { flex: 0 0 auto; }
+.adm .tabs { display: flex; gap: 8px; overflow-x: auto; margin: 0 -16px 16px; padding: 0 16px 4px; scrollbar-width: none; }
+.adm .tabs a { flex: none; min-height: 40px; display: inline-flex; align-items: center; gap: 6px; padding: 0 14px; border: 1px solid #d4d4d8; border-radius: 20px; background: #fff; font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.adm .tabs a[aria-current="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+.adm .pill { display: inline-flex; align-items: center; min-height: 24px; padding: 0 10px; border-radius: 12px; font-size: 12px; font-weight: 700; white-space: nowrap; background: #f4f4f5; color: var(--mut); }
+.adm .pill.new { background: var(--infobg); color: var(--info); }
+.adm .pill.confirmed { background: var(--warnbg); color: var(--warn); }
+.adm .pill.out_for_delivery { background: #ede9fe; color: #5b21b6; }
+.adm .pill.delivered, .adm .pill.paid { background: var(--okbg); color: var(--ok); }
+.adm .pill.cancelled, .adm .pill.returned, .adm .pill.unpaid { background: var(--badbg); color: var(--bad); }
+
+.adm .note { padding: 12px 14px; border-radius: 10px; font-size: 14px; font-weight: 600; margin-bottom: 16px; }
+.adm .note.err { background: var(--badbg); color: var(--bad); }
+.adm .note.good { background: var(--okbg); color: var(--ok); }
+.adm .note.warn { background: var(--warnbg); color: var(--warn); }
+
+/* Lists: cards on phones, table rows on desktop */
+.adm .olist { display: grid; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.adm .olist a { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 14px 16px; background: #fff; border: 1px solid var(--line); border-radius: 12px; text-decoration: none; }
+.adm .olist a:hover { border-color: #a1a1aa; }
+.adm .olist .t { font-weight: 600; }
+.adm .olist .amt { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+.adm .olist .meta { grid-column: 1 / -1; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 13px; color: var(--mut); }
+
+.adm .tablewrap { overflow-x: auto; }
+.adm table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.adm th { text-align: left; font-size: 12px; font-weight: 700; color: var(--mut); text-transform: uppercase; letter-spacing: .04em; padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.adm td { padding: 10px; border-bottom: 1px solid #f1f1f3; vertical-align: middle; }
+.adm tr:last-child td { border-bottom: 0; }
+.adm th.right, .adm td.right { text-align: right; }
+.adm .bar { height: 8px; border-radius: 4px; background: var(--ink); min-width: 2px; }
+
+.adm .kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; font-size: 14px; margin: 0; }
+.adm .kv dt { color: var(--mut); }
+.adm .kv dd { margin: 0; text-align: right; overflow-wrap: anywhere; }
+.adm .timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-size: 13px; }
+.adm .timeline li { padding-left: 14px; border-left: 2px solid var(--line); }
+
+.adm .stockrow { display: grid; gap: 10px; padding: 14px 0; border-bottom: 1px solid #f1f1f3; }
+.adm .stockrow:last-child { border-bottom: 0; }
+.adm .stockrow .name { font-weight: 600; font-size: 14px; }
+.adm .stockrow .ins { display: grid; grid-template-columns: repeat(4, 1fr) auto; gap: 8px; align-items: end; }
+.adm .stockrow .ins label { display: grid; gap: 4px; font-size: 11px; font-weight: 700; color: var(--mut); text-transform: uppercase; }
+.adm .stockrow .ins input { padding: 8px; min-height: 44px; }
+@media (max-width: 520px) { .adm .stockrow .ins { grid-template-columns: 1fr 1fr; } .adm .stockrow .ins .btn { grid-column: 1 / -1; } }
+@media (min-width: 900px) { .adm .stockrow { grid-template-columns: 1fr 520px; align-items: center; } }
+
+.adm-login { min-height: 100dvh; display: grid; place-items: center; padding: 24px; background: var(--bg); }
+.adm-login .card { width: 100%; max-width: 380px; padding: 28px 24px; }
+
+.adm-dialog-back { position: fixed; inset: 0; z-index: 50; background: rgba(0, 0, 0, .5); display: grid; place-items: center; padding: 20px; }
+.adm-dialog { background: #fff; border-radius: 16px; padding: 24px; width: 100%; max-width: 360px; text-align: center; display: grid; gap: 14px; }
+.adm-dialog .big { font: 600 44px/1 "Bricolage Grotesque", Montserrat, sans-serif; }
+@media (prefers-reduced-motion: no-preference) { .adm-dialog { animation: admpop .2s ease-out; } @keyframes admpop { from { opacity: 0; transform: translateY(8px); } } }

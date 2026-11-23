@@ -9,22 +9,22 @@ import ProductCard from "@/components/ProductCard";
 
 type P = { params: Promise<{ handle: string }> };
 
-export function generateStaticParams() {
-  return allProducts().map((p) => ({ handle: p.handle }));
+export async function generateStaticParams() {
+  return (await allProducts()).map((p) => ({ handle: p.handle }));
 }
 
 export async function generateMetadata({ params }: P): Promise<Metadata> {
-  const p = getProduct((await params).handle);
+  const p = await getProduct((await params).handle);
   if (!p) return {};
   const text = p.body_html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim().slice(0, 160);
   return { title: p.title, description: text, openGraph: { images: p.images[0] ? [img(p.images[0].src, 1200)] : [] } };
 }
 
 export default async function ProductPage({ params }: P) {
-  const p = getProduct((await params).handle);
+  const p = await getProduct((await params).handle);
   if (!p) notFound();
   const b = badges(p);
-  const related = (getCollection("best-sellers")?.products ?? []).filter((x) => x.handle !== p.handle).slice(0, 4);
+  const related = ((await getCollection("best-sellers"))?.products ?? []).filter((x) => x.handle !== p.handle).slice(0, 4);
   return (
     <div className="container">
       <div className="pdp">

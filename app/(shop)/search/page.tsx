@@ -5,7 +5,7 @@ export const metadata = { title: "Search" };
 
 export default async function SearchPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
   const q = (await searchParams).q ?? "";
-  const results = search(q);
+  const results = await search(q);
   return (
     <div className="container section">
       <h1 className="section-title">Search</h1>

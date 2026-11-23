@@ -6,11 +6,11 @@ import ProductCard from "@/components/ProductCard";
 import AddToCart from "@/components/AddToCart";
 import { Countdown, Gallery } from "@/components/Bits";
 
-export default function Home() {
+export default async function Home() {
   const h = site.home;
-  const best = getCollection(h.bestSellersCollection)?.products ?? [];
-  const featured = getProduct(h.featuredProduct);
-  const look = productsByHandles(h.shopTheLook.products);
+  const best = (await getCollection(h.bestSellersCollection))?.products ?? [];
+  const featured = await getProduct(h.featuredProduct);
+  const look = await productsByHandles(h.shopTheLook.products);
   const scroll = [...h.scrollingImages, ...h.scrollingImages];
 
   return (

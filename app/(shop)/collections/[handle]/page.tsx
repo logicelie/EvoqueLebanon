@@ -6,12 +6,12 @@ import SortFilter from "@/components/SortFilter";
 
 type P = { params: Promise<{ handle: string }>; searchParams: Promise<{ sort?: string; stock?: string }> };
 
-export function generateStaticParams() {
-  return [{ handle: "all" }, ...allCollections().map((c) => ({ handle: c.handle }))];
+export async function generateStaticParams() {
+  return [{ handle: "all" }, ...(await allCollections()).map((c) => ({ handle: c.handle }))];
 }
 
 export async function generateMetadata({ params }: P): Promise<Metadata> {
-  const c = getCollection((await params).handle);
+  const c = await getCollection((await params).handle);
   return c ? { title: c.collection.title } : {};
 }
 
@@ -23,7 +23,7 @@ const sorters: Record<string, (a: Product, b: Product) => number> = {
 };
 
 export default async function CollectionPage({ params, searchParams }: P) {
-  const data = getCollection((await params).handle);
+  const data = await getCollection((await params).handle);
   if (!data) notFound();
   const { sort, stock } = await searchParams;
   let list = [...data.products];

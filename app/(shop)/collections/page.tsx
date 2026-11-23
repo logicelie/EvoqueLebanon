@@ -4,14 +4,15 @@ import { img } from "@/lib/img";
 
 export const metadata = { title: "Collections" };
 
-export default function Collections() {
-  const cols = allCollections();
+export default async function Collections() {
+  const cols = await allCollections();
+  const covers = Object.fromEntries(await Promise.all(cols.map(async (c) => [c.handle, c.image ?? (await getCollection(c.handle))?.products[0]?.images[0]?.src] as const)));
   return (
     <div className="container section">
       <h1 className="section-title">Shop by collection</h1>
       <div className="tiles">
         {cols.map((c) => {
-          const cover = c.image ?? getCollection(c.handle)?.products[0]?.images[0]?.src;
+          const cover = covers[c.handle];
           return (
             <Link key={c.handle} href={`/collections/${c.handle}`} className="tile" style={{ background: "#f3f3f3" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}

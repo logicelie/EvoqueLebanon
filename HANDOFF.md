@@ -34,6 +34,21 @@ Live at https://evoquelebanon.com (`www` and plain http redirect there; also htt
 - The longer team URLs (`evoque-lebanon-eliehaddad-2919s-projects.vercel.app`) ask for a Vercel login (Standard Protection); `evoque-lebanon.vercel.app` and any custom domain are public.
 - `npm audit` still reports postcss and sharp advisories that come through Next.js; only a Next 16 upgrade clears them. Vercel does not block on them.
 
+## Staff portal (/admin)
+
+Built on 2026-11-23: orders, stock, reports and staff logins, mobile first. It needs a Postgres database; until `DATABASE_URL` is set on Vercel the portal shows "database not connected" and the store keeps taking orders on WhatsApp only.
+
+- **Database**: the owner agreed to Neon Postgres through Vercel (project, Storage, Create Database, Neon). `npm run build` runs `scripts/db-migrate.mjs` first, which applies `db/schema.sql` (idempotent) and, when there are no users, creates the first admin from the `ADMIN_USERNAME` / `ADMIN_PASSWORD` environment variables (set on Vercel).
+- **Checkout**: `app/(shop)/cart/page.tsx` posts to `app/api/orders/route.ts`, which saves the order (`lib/orders.ts`), takes tracked items out of stock and returns the number (`EV-1001`...). Prices are recomputed on the server. The thank-you page offers a pre-filled WhatsApp message. A 503 (no database) falls back to WhatsApp-only.
+- **Roles**: `admin` sees everything. `driver` sees only orders ready for delivery or out with them (plus their deliveries of the last 7 days) and can mark out for delivery, delivered (with how it was paid) or "could not deliver".
+- **Order statuses**: new, confirmed, out for delivery, delivered, cancelled, returned. Cancelled and returned put tracked items back in stock. Payment methods: cash on delivery, Whish, OMT.
+- **New-order pop-up**: `NewOrdersPopup` in `components/admin/client.tsx`, shown on opening the portal and when the count rises (checked every 45 seconds). Admins: new orders. Drivers: orders ready for delivery.
+- **Stock**: table `stock`, one row per size. Empty quantity = not tracked (always available). The portal can also set a Lebanon price, a cost and hide a product. `lib/catalog.ts` merges this into the store through a cache tagged `catalog`, refreshed on every change.
+- **Reports**: `lib/reports.ts`; dates are Lebanon time. CSV export at `/admin/reports/export`.
+- **Not built yet**: editing the items of an existing order (cancel it and create a new one instead); email alerts.
+- **Tested** locally against Postgres 16 with a Playwright script (checkout, pop-up, confirm, overselling blocked, cancel restocks, driver permissions, delivery and cash, reports, CSV, manual order, mobile layouts): all passing. Not yet tested on Vercel with Neon.
+- Storefront pages moved to `app/(shop)/` so the portal has its own layout; URLs did not change.
+
 ## Still needed from the owner
 
 - Email for `hello@evoquelebanon.com`: the domain has no MX records, so mail to that address (shown on the site) is not delivered yet. Set up email (for example GoDaddy/Microsoft 365 or Google Workspace) and add its MX records in GoDaddy DNS.
