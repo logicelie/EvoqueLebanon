@@ -27,7 +27,7 @@ See `README.md` for structure, the sync script and which files to edit.
 
 ## Deployment (Vercel)
 
-Live at https://evoque-lebanon.vercel.app (project `evoque-lebanon`, team `eliehaddad-2919's projects`, deploys automatically from `claude/loving-shannon-6nzjxe`).
+Live at https://evoquelebanon.com (`www` and plain http redirect there; also https://evoque-lebanon.vercel.app). Vercel project `evoque-lebanon`, team `eliehaddad-2919's projects`,, deploys automatically from `claude/loving-shannon-6nzjxe`. GoDaddy DNS: A `@` 216.198.79.1, CNAME `www` to `@`. Tested on the custom domain, desktop and mobile, same results as below.
 
 - The first two deployments failed because Vercel refuses to ship next@15.3.3 (CVE-2025-66478): the build passed, then "Vulnerable version of Next.js detected". Fixed by upgrading to next 15.5.29 and React 19.2.9 (commit c765ec6).
 - Tested live on desktop and mobile (iPhone 13): home, collection, product, add to cart, cart and checkout all load with no errors or horizontal overflow, and "Place order" opens WhatsApp to 9613979313 with the order filled in.
@@ -36,7 +36,7 @@ Live at https://evoque-lebanon.vercel.app (project `evoque-lebanon`, team `elieh
 
 ## Still needed from the owner
 
-- GoDaddy DNS for `evoquelebanon.com`. Both `evoquelebanon.com` and `www.evoquelebanon.com` (308 redirect to the apex) are added to the Vercel project. In GoDaddy DNS the owner still has to replace the parked A records for `@` (3.33.130.190, 15.197.148.33) with `216.198.79.1`, point the `www` CNAME at `bc467d282b9d9283.vercel-dns-017.com`, turn off forwarding and leave MX records alone. Vercel issues HTTPS once DNS resolves.
+- Email for `hello@evoquelebanon.com`: the domain has no MX records, so mail to that address (shown on the site) is not delivered yet. Set up email (for example GoDaddy/Microsoft 365 or Google Workspace) and add its MX records in GoDaddy DNS.
 
 ## Known differences from evoqueusa.com
 
