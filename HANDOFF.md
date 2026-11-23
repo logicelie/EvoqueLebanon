@@ -1,6 +1,6 @@
 # Evoque Lebanon: handoff
 
-State as of 2026-11-23. Everything is on branch `claude/loving-shannon-6nzjxe` of `logicelie/EvoqueLebanon` (the repo's only branch; there is no `main`). No pull request has been opened.
+State as of 2026-11-23 (updated after the Vercel fix). Everything is on branch `claude/loving-shannon-6nzjxe` of `logicelie/EvoqueLebanon` (the repo's only branch; there is no `main`). No pull request has been opened.
 
 ## What this is
 
@@ -24,19 +24,14 @@ See `README.md` for structure, the sync script and which files to edit.
 - Promotions removed: no "Buy 3 Get 1 Free", no Black Friday hero or countdown, no `QUIZ10`. The hero is now a Smart Keratin photo with "Salon hair care. Now in Lebanon." To run a promotion later, fill `home.hero.offers` and `home.hero.countdownTo` in `data/site.json`.
 - Verified locally: clean `npm ci && npm run build` generates 171 pages; all 464 internal links and images resolve; no horizontal overflow on desktop or mobile; add to cart through to the checkout form works. The final hand-off to WhatsApp was not tested with a real order.
 
-## Open problem: Vercel deployment failed
+## Deployment (Vercel)
 
-The owner created the Vercel project by hand and reports that the deployment failed. The cause is unknown.
+Live at https://evoque-lebanon.vercel.app (project `evoque-lebanon`, team `eliehaddad-2919's projects`, deploys automatically from `claude/loving-shannon-6nzjxe`).
 
-- The Vercel connector in the previous session could only see the team `eliehaddad-2919's projects` (`team_3plYngnplKGIu5yVCzjVXXl8`) and one project, `appgym-private` (unrelated; do not deploy there). It could not see the Evoque project and got 403 when creating one. The owner reconnected Vercel; a new session may see more.
-- The code builds cleanly from a fresh clone, so suspect project settings first: production branch (there is no `main`), root directory, build command (should be the default `next build`), Node version.
-
-Next steps:
-
-1. List Vercel teams and projects; find the project linked to `logicelie/EvoqueLebanon`.
-2. Read the failed deployment's build log and fix the cause.
-3. If the project is still not visible, ask the owner for the red error lines from the Build Logs and the team name shown at the top left of the project page.
-4. Once a deployment is ready, test the live URL: home, a product, a collection, cart and checkout, on desktop and mobile.
+- The first two deployments failed because Vercel refuses to ship next@15.3.3 (CVE-2025-66478): the build passed, then "Vulnerable version of Next.js detected". Fixed by upgrading to next 15.5.29 and React 19.2.9 (commit c765ec6).
+- Tested live on desktop and mobile (iPhone 13): home, collection, product, add to cart, cart and checkout all load with no errors or horizontal overflow, and "Place order" opens WhatsApp to 9613979313 with the order filled in.
+- The longer team URLs (`evoque-lebanon-eliehaddad-2919s-projects.vercel.app`) ask for a Vercel login (Standard Protection); `evoque-lebanon.vercel.app` and any custom domain are public.
+- `npm audit` still reports postcss and sharp advisories that come through Next.js; only a Next 16 upgrade clears them. Vercel does not block on them.
 
 ## Still needed from the owner
 
