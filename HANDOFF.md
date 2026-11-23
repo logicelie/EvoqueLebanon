@@ -27,7 +27,7 @@ See `README.md` for structure, the sync script and which files to edit.
 
 ## Deployment (Vercel)
 
-Live at https://evoquelebanon.com (`www` and plain http redirect there; also https://evoque-lebanon.vercel.app). Vercel project `evoque-lebanon`, team `eliehaddad-2919's projects`,, deploys automatically from `claude/loving-shannon-6nzjxe`. GoDaddy DNS: A `@` 216.198.79.1, CNAME `www` to `@`. Tested on the custom domain, desktop and mobile, same results as below.
+Live at https://evoquelebanon.com (`www` and plain http redirect there; also https://evoque-lebanon.vercel.app). Vercel project `evoque-lebanon`, team `eliehaddad-2919's projects`, deploys automatically from `claude/loving-shannon-6nzjxe`. GoDaddy DNS: A `@` 216.198.79.1, CNAME `www` to `@`. Tested on the custom domain, desktop and mobile, same results as below.
 
 - The first two deployments failed because Vercel refuses to ship next@15.3.3 (CVE-2025-66478): the build passed, then "Vulnerable version of Next.js detected". Fixed by upgrading to next 15.5.29 and React 19.2.9 (commit c765ec6).
 - Tested live on desktop and mobile (iPhone 13): home, collection, product, add to cart, cart and checkout all load with no errors or horizontal overflow, and "Place order" opens WhatsApp to 9613979313 with the order filled in.
