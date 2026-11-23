@@ -1,0 +1,18 @@
+[
+ {
+  "id": 1,
+  "handle": "best-sellers",
+  "title": "Best Sellers",
+  "description": "",
+  "image": null,
+  "products_count": 6
+ },
+ {
+  "id": 2,
+  "handle": "miracle-touch",
+  "title": "Miracle Touch",
+  "description": "Our Miracle Touch line.",
+  "image": null,
+  "products_count": 3
+ }
+]

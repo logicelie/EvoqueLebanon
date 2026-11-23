@@ -1,0 +1,281 @@
+[
+ {
+  "id": 819679651,
+  "handle": "miracle-touch-shine-spray",
+  "title": "MIRACLE TOUCH SHINE SPRAY",
+  "vendor": "Evoque",
+  "product_type": "Hair Spray",
+  "tags": [
+   "_badge: Best Seller"
+  ],
+  "body_html": "<p><strong>One of our favorites and best sellers \u2014 this product sells quickly!</strong></p><p>Experience <strong>instant luminosity and silky smoothness</strong> with the Evoque Miracle Touch Shine Spray.</p>",
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 198997304,
+    "title": "Default Title",
+    "price": "30.00",
+    "compare_at_price": null,
+    "sku": "",
+    "available": true,
+    "option1": "Default Title",
+    "option2": null,
+    "option3": null,
+    "image": null
+   }
+  ],
+  "images": [
+   {
+    "src": "files/shine-spray-2.jpg",
+    "width": 1000,
+    "height": 1000
+   },
+   {
+    "src": "files/hf_20260510_003930_dbd498ac-b63a-464a-bc2a-876fde2e91d9.png",
+    "width": 1000,
+    "height": 1000
+   }
+  ]
+ },
+ {
+  "id": 800694068,
+  "handle": "miracle-touch-hair-bb-cream",
+  "title": "Miracle Touch BB Cream 150 ml (5.07 fl oz)",
+  "vendor": "Evoque",
+  "product_type": "Hair Styling Creamy",
+  "tags": [
+   "_badge: Best Seller"
+  ],
+  "body_html": "<p><strong>Repair \u2022 Hydrate \u2022 Restore</strong></p><p>The <strong>Evoque Miracle Touch BB Cream</strong> is a leave-in cream made for <strong>dry, damaged, or color-treated hair</strong>.</p>",
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 691534426,
+    "title": "Default Title",
+    "price": "30.00",
+    "compare_at_price": null,
+    "sku": "",
+    "available": true,
+    "option1": "Default Title",
+    "option2": null,
+    "option3": null,
+    "image": null
+   }
+  ],
+  "images": [
+   {
+    "src": "files/hf_20260510_003922_aaa82030-cecc-446b-82da-6760aa611364.png",
+    "width": 1000,
+    "height": 1000
+   },
+   {
+    "src": "files/miracle-touch-bb-cream.jpg",
+    "width": 1000,
+    "height": 1000
+   },
+   {
+    "src": "files/miracle-bb.png",
+    "width": 1000,
+    "height": 1000
+   }
+  ]
+ },
+ {
+  "id": 33849984,
+  "handle": "miracle-touch-leave-in-conditioner",
+  "title": "Miracle Touch Leave-in Conditioner 150 ml (5.07 fl oz)",
+  "vendor": "Evoque",
+  "product_type": "Leave in Conditioner",
+  "tags": [
+   "_badge: Best Seller",
+   "_badge: Limited Stock"
+  ],
+  "body_html": "<p><strong>At a glance</strong></p><ul><li><strong>What it is:</strong> an ultra-lightweight leave-in spray that works as a bond-building, heat-protective prep step before styling.</li><li><strong>Best for:</strong> all hair types, especially frizz-prone hair in humid weather.</li></ul>",
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 691009847,
+    "title": "Default Title",
+    "price": "30.00",
+    "compare_at_price": null,
+    "sku": "",
+    "available": true,
+    "option1": "Default Title",
+    "option2": null,
+    "option3": null,
+    "image": null
+   }
+  ],
+  "images": [
+   {
+    "src": "files/miracle-leave-in-conditioner_31bc14c3-22f3-42ca-9213-00347b084d63.jpg",
+    "width": 1000,
+    "height": 1000
+   },
+   {
+    "src": "files/miracle-leave-in-conditioner.jpg",
+    "width": 1000,
+    "height": 1000
+   },
+   {
+    "src": "files/miracle-leave-in.png",
+    "width": 1000,
+    "height": 1000
+   }
+  ]
+ },
+ {
+  "id": 260474262,
+  "handle": "plex-extreme-s-o-s-shampoo-1000ml",
+  "title": "Plex Extreme S.O.S Shampoo 1000ml",
+  "vendor": "Evoque",
+  "product_type": "Shampoo",
+  "tags": [
+   "_badge: Best Seller"
+  ],
+  "body_html": "<p><strong>Rebuild from Within. Strength Starts Here.</strong></p><p>Transform weak, damaged hair with the <strong>Evoque PLEX Series Shampoo</strong>.</p>",
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 636250832,
+    "title": "Default Title",
+    "price": "52.00",
+    "compare_at_price": null,
+    "sku": "",
+    "available": true,
+    "option1": "Default Title",
+    "option2": null,
+    "option3": null,
+    "image": null
+   }
+  ],
+  "images": [
+   {
+    "src": "files/hf_20260510_003823_6b04aad6-3581-4335-814a-950867f24fe0.png",
+    "width": 1000,
+    "height": 1000
+   },
+   {
+    "src": "files/plex-sh-1000.png",
+    "width": 1000,
+    "height": 1000
+   }
+  ]
+ },
+ {
+  "id": 784428848,
+  "handle": "scalp-recovery-anti-hair-loss-shampoo-300ml",
+  "title": "Scalp Recovery Anti Hair Loss Shampoo",
+  "vendor": "Evoque",
+  "product_type": "Shampoo",
+  "tags": [],
+  "body_html": "<p><strong>At a glance</strong></p><ul><li><strong>What it is:</strong> a scalp-care shampoo with piroctone olamine, tea tree and eucalyptus extracts.</li></ul>",
+  "options": [
+   {
+    "name": "SIZE",
+    "values": [
+     "300 ML (10.14 FL OZ)"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 990843058,
+    "title": "300 ML (10.14 FL OZ)",
+    "price": "30.00",
+    "compare_at_price": "36.00",
+    "sku": "",
+    "available": true,
+    "option1": "300 ML (10.14 FL OZ)",
+    "option2": null,
+    "option3": null,
+    "image": null
+   }
+  ],
+  "images": [
+   {
+    "src": "files/hf_20260510_003727_72542cfe-7171-4048-9fe2-abdf90759edd.png",
+    "width": 1000,
+    "height": 1000
+   },
+   {
+    "src": "files/Untitled-23.png",
+    "width": 1000,
+    "height": 1000
+   }
+  ]
+ },
+ {
+  "id": 139697361,
+  "handle": "evoque-reconstructive-leave-in-conditioner-400ml-13-58oz",
+  "title": "Reconstructive Leave in Conditioner 400ml (13.58oz)",
+  "vendor": "Evoque",
+  "product_type": "Leave in Conditioner",
+  "tags": [
+   "_badge: Best Seller"
+  ],
+  "body_html": "<p><strong>At a glance</strong></p><ul><li><strong>What it is:</strong> a lightweight two-phase leave-in spray from the Healthy Care line, with hydrolyzed keratin and argan extract.</li></ul>",
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 14408161,
+    "title": "Default Title",
+    "price": "30.00",
+    "compare_at_price": null,
+    "sku": "",
+    "available": true,
+    "option1": "Default Title",
+    "option2": null,
+    "option3": null,
+    "image": null
+   }
+  ],
+  "images": [
+   {
+    "src": "files/hhc-leave-in.png",
+    "width": 1000,
+    "height": 1000
+   },
+   {
+    "src": "files/hf_20260510_003428_c6046cef-180b-48d4-8300-7e6c88c30f05.png",
+    "width": 1000,
+    "height": 1000
+   }
+  ]
+ }
+]

@@ -1,0 +1,321 @@
+{
+  "name": "Evoque Lebanon",
+  "tagline": "Salon hair care, now in Lebanon",
+  "logo": "files/evoque_black_2x_7841eb9c-569d-4293-81c1-d29511bf658b.webp",
+  "currency": "USD",
+  "priceMultiplier": 1,
+  "contact": {
+    "whatsapp": "96100000000",
+    "phone": "+961 00 000 000",
+    "email": "hello@evoquelebanon.com",
+    "address": "Beirut, Lebanon",
+    "instagram": "https://www.instagram.com/evoquelebanon/"
+  },
+  "announcements": [
+    "Buy 3 Get 1 Free",
+    "Free delivery across Lebanon on orders $100+",
+    "Cash on delivery available"
+  ],
+  "nav": [
+    {
+      "label": "Find your routine",
+      "href": "/pages/hair-quiz"
+    },
+    {
+      "label": "All products",
+      "href": "/collections/all"
+    },
+    {
+      "label": "Shop by hair types",
+      "children": [
+        {
+          "label": "All Hair Types",
+          "href": "/collections/all-hair-types"
+        },
+        {
+          "label": "Dry Hair",
+          "href": "/collections/evoque-milk-therapy"
+        },
+        {
+          "label": "Hair Loss & Dandruff",
+          "href": "/collections/anti-hair-loss-scalp-care-shampoo-hair-fall-dandruff-treatment"
+        },
+        {
+          "label": "Damaged & Frizzy Hair",
+          "href": "/collections/damaged-and-frizzy-hair"
+        },
+        {
+          "label": "Colored Hair",
+          "href": "/collections/evoque-non-ammonia"
+        },
+        {
+          "label": "Blonde, Silver & Platinum",
+          "href": "/collections/evoque-flawless-blonde-purple-shampoo-hair-care-series"
+        },
+        {
+          "label": "Thick & Curly",
+          "href": "/collections/thick-and-curly"
+        },
+        {
+          "label": "Very Processed Hair",
+          "href": "/collections/plex-line"
+        }
+      ]
+    },
+    {
+      "label": "Shop by collection",
+      "href": "/collections",
+      "children": [
+        {
+          "label": "Miracle Touch",
+          "href": "/collections/miracle-touch"
+        },
+        {
+          "label": "Smart Keratin",
+          "href": "/collections/evoque-smart-keratin"
+        },
+        {
+          "label": "Milk Therapy",
+          "href": "/collections/evoque-milk-therapy"
+        },
+        {
+          "label": "Scalp Recovery",
+          "href": "/collections/evoque-anti-hair-loss-dandruff"
+        },
+        {
+          "label": "Plex",
+          "href": "/collections/plex-line"
+        },
+        {
+          "label": "Macadamia",
+          "href": "/collections/macademia-series"
+        },
+        {
+          "label": "Clay Mask",
+          "href": "/collections/clay-mask"
+        },
+        {
+          "label": "Travel Size",
+          "href": "/collections/travel-size-100ml"
+        },
+        {
+          "label": "Styling",
+          "href": "/collections/hair-styling-products"
+        },
+        {
+          "label": "Sets & Bundles",
+          "href": "/collections/hair-care-sets-and-bundles"
+        },
+        {
+          "label": "Men",
+          "href": "/collections/mens-hair-care-and-styling-treatment-products"
+        }
+      ]
+    },
+    {
+      "label": "About us",
+      "children": [
+        {
+          "label": "Our Story",
+          "href": "/pages/our-story"
+        },
+        {
+          "label": "About Evoque",
+          "href": "/pages/about-evoque"
+        },
+        {
+          "label": "Vision & Mission",
+          "href": "/pages/vision-mission"
+        },
+        {
+          "label": "Contact Us",
+          "href": "/pages/contact-us"
+        }
+      ]
+    },
+    {
+      "label": "Partners",
+      "href": "/pages/partners"
+    }
+  ],
+  "home": {
+    "hero": {
+      "image": "files/black-friday-early-access-hero-2026.png",
+      "eyebrow": "Black Friday / Lebanon",
+      "title": [
+        "Black Friday.",
+        "Early Access."
+      ],
+      "text": "Our best prices of the year, before everyone else. Salon-grade, sulfate free professional hair care — now delivered across Lebanon.",
+      "offers": [
+        {
+          "big": "20% OFF",
+          "small": "Single products"
+        },
+        {
+          "big": "30% OFF",
+          "small": "Sets and bundles"
+        },
+        {
+          "big": "40% OFF",
+          "small": "Orders over $400"
+        }
+      ],
+      "countdownTo": "2026-11-30T23:59:00+02:00",
+      "cta": {
+        "label": "Shop early access",
+        "href": "/collections/all"
+      },
+      "footnote": "Free delivery across Lebanon over $100 / Cash on delivery"
+    },
+    "bestSellersCollection": "best-sellers",
+    "quizBanner": {
+      "image": "files/hair-quiz-banner.png",
+      "title": "Not sure where to start?",
+      "subtitle": "A few questions to your salon routine.",
+      "text": "Get a personal hair analysis and a four-step Evoque routine, with 10% off when you finish.",
+      "cta": {
+        "label": "Take the hair quiz",
+        "href": "/pages/hair-quiz"
+      }
+    },
+    "scrollingImages": [
+      "files/macadamia-mask.png",
+      "files/mt-mask.png",
+      "files/sk-mask.png",
+      "files/yog-mask.png",
+      "files/fb-mask.png",
+      "files/hair-butter.png"
+    ],
+    "collectionGallery": [
+      {
+        "pre": "Milk Therapy",
+        "label": "Collection",
+        "image": "files/WhatsApp_Image_2025-06-29_at_22.11.13_2.jpg",
+        "href": "/collections/evoque-milk-therapy"
+      },
+      {
+        "pre": "Smart Keratin",
+        "label": "Collection",
+        "image": "files/WhatsApp_Image_2025-06-29_at_22.11.13_5.jpg",
+        "href": "/collections/evoque-smart-keratin"
+      },
+      {
+        "pre": "Scalp",
+        "label": "Collection",
+        "image": "products/Scalp_Serie.png",
+        "href": "/collections/evoque-anti-hair-loss-dandruff"
+      },
+      {
+        "pre": "Healthy",
+        "label": "Collection",
+        "image": "files/WhatsApp_Image_2025-06-29_at_22.11.13_4.jpg",
+        "href": "/collections/evoque-non-ammonia"
+      },
+      {
+        "pre": "Flawless",
+        "label": "Collection",
+        "image": "files/Conjunto-rubio-impecable-edited_1.png",
+        "href": "/collections/evoque-purple-series"
+      },
+      {
+        "pre": "Plex",
+        "label": "Collection",
+        "image": "files/78e7410b-17fe-47ee-b17e-64c5b3776e18.jpg",
+        "href": "/collections/plex-line"
+      },
+      {
+        "pre": "Macadamia",
+        "label": "Collection",
+        "image": "files/OPTIMIZE_BACKUP_PRODUCT_Macadamia_Scene.png",
+        "href": "/collections/macadamia-hair-care-series-deep-nourishing-oils-masks"
+      },
+      {
+        "pre": "Styling",
+        "label": "Collection",
+        "image": "files/WhatsApp_Image_2025-06-29_at_22.11.13.jpg",
+        "href": "/collections/hair-styling-products"
+      }
+    ],
+    "marquee": [
+      "Miracle Touch",
+      "featured products",
+      "new arrivals",
+      "bestsellers"
+    ],
+    "featuredProduct": "miracle-touch-leave-in-conditioner",
+    "featuredTitle": "Miracle Touch bestsellers",
+    "shopTheLook": {
+      "title": "Shop the Collection",
+      "subtitle": "Scalp Recovery",
+      "image": "files/newscalpbundle.jpg",
+      "products": [
+        "evoque-scalp-recovery-conditioner-300ml-10-14oz",
+        "scalp-recovery-anti-hair-loss-tonic-90ml-3-04oz",
+        "scalp-recovery-anti-hair-loss-shampoo-300ml",
+        "scalp-recovery-anti-hair-loss-serum"
+      ]
+    },
+    "imageWithText": {
+      "image": "files/poster-design-rev_scalp.jpg",
+      "title": "Scalp",
+      "cta": {
+        "label": "Read more",
+        "href": "/collections/evoque-anti-hair-loss-dandruff"
+      }
+    },
+    "instagram": {
+      "title": "Find us on Instagram",
+      "text": "Follow us for the latest updates",
+      "handle": "@evoquelebanon",
+      "images": [
+        "files/IMG_1325.jpg",
+        "files/IMG_1326.jpg",
+        "files/IMG_1327.jpg",
+        "files/IMG_1328.jpg"
+      ]
+    }
+  },
+  "footer": {
+    "navigation": [
+      {
+        "label": "Best Sellers",
+        "href": "/collections/best-sellers"
+      },
+      {
+        "label": "Special Offers",
+        "href": "/collections/special-offers"
+      },
+      {
+        "label": "All Products",
+        "href": "/collections/all"
+      }
+    ],
+    "information": [
+      {
+        "label": "About Evoque",
+        "href": "/pages/about-evoque"
+      },
+      {
+        "label": "Vision & Mission",
+        "href": "/pages/vision-mission"
+      },
+      {
+        "label": "Hair Care Guide",
+        "href": "/blogs/hair-care-guide"
+      },
+      {
+        "label": "Delivery & Returns",
+        "href": "/pages/return-policy"
+      },
+      {
+        "label": "Contact Us",
+        "href": "/pages/contact-us"
+      }
+    ],
+    "newsletter": {
+      "title": "Sign up for our newsletter",
+      "text": "Be the first to know about our biggest and best sales."
+    }
+  }
+}
