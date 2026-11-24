@@ -57,7 +57,7 @@ export default function CartPage() {
         {done.number ? (
           <>
             <p>Your order <strong>{done.number}</strong> is confirmed for {money(done.total)}. We’ll contact you to arrange delivery.</p>
-            {done.payment !== "cod" && <p>You chose {PAYMENTS[done.payment]}. Message us on WhatsApp and we’ll send you the transfer details.</p>}
+            {done.payment !== "cod" && <p>To pay by {PAYMENTS[done.payment]}, send {money(done.total)} to <strong>{site.contact.phone}</strong> and share the receipt with us on WhatsApp, mentioning order {done.number}.</p>}
             <p><a href={done.whatsapp} target="_blank" rel="noreferrer" className="btn btn-dark">Message us on WhatsApp</a></p>
           </>
         ) : (

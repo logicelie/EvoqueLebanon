@@ -4,6 +4,7 @@
   "logo": "files/evoque_black_2x_7841eb9c-569d-4293-81c1-d29511bf658b.webp",
   "currency": "USD",
   "priceMultiplier": 1,
+  "showSalePrices": false,
   "contact": {
     "whatsapp": "9613979313",
     "phone": "+961 3 979 313",

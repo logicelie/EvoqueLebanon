@@ -44,7 +44,8 @@ function base(): Base {
       variants: p.variants.map((v) => ({
         ...v,
         price: ov.prices?.[`${p.handle}:${v.title}`] ?? ov.prices?.[p.handle] ?? fix(v.price)!,
-        compare_at_price: fix(v.compare_at_price),
+        // The Lebanon site shows one plain USD price; set "showSalePrices": true in data/site.json to bring back crossed-out prices.
+        compare_at_price: (site as { showSalePrices?: boolean }).showSalePrices ? fix(v.compare_at_price) : null,
         available: unavailable.has(p.handle) ? false : v.available,
       })),
     }));
