@@ -36,7 +36,7 @@ Live at https://evoquelebanon.com (`www` and plain http redirect there; also htt
 
 ## Staff portal (/admin)
 
-Built on 2026-11-23: orders, stock, reports and staff logins, mobile first. It needs a Postgres database; until `DATABASE_URL` is set on Vercel the portal shows "database not connected" and the store keeps taking orders on WhatsApp only.
+Built on 2026-11-23: orders, stock, reports and staff logins, mobile first. It runs on Neon Postgres connected through Vercel (`DATABASE_URL`). If the database is ever disconnected the portal shows "database not connected" and the store falls back to WhatsApp-only ordering.
 
 - **Database**: the owner agreed to Neon Postgres through Vercel (project, Storage, Create Database, Neon). `npm run build` runs `scripts/db-migrate.mjs` first, which applies `db/schema.sql` (idempotent) and, when there are no users, creates the first admin from the `ADMIN_USERNAME` / `ADMIN_PASSWORD` environment variables (set on Vercel).
 - **Checkout**: `app/(shop)/cart/page.tsx` posts to `app/api/orders/route.ts`, which saves the order (`lib/orders.ts`), takes tracked items out of stock and returns the number (`EV-1001`...). Prices are recomputed on the server. The thank-you page offers a pre-filled WhatsApp message. A 503 (no database) falls back to WhatsApp-only.
@@ -46,7 +46,7 @@ Built on 2026-11-23: orders, stock, reports and staff logins, mobile first. It n
 - **Stock**: table `stock`, one row per size. Empty quantity = not tracked (always available). The portal can also set a Lebanon price, a cost and hide a product. `lib/catalog.ts` merges this into the store through a cache tagged `catalog`, refreshed on every change.
 - **Reports**: `lib/reports.ts`; dates are Lebanon time. CSV export at `/admin/reports/export`.
 - **Not built yet**: editing the items of an existing order (cancel it and create a new one instead); email alerts.
-- **Tested** locally against Postgres 16 with a Playwright script (checkout, pop-up, confirm, overselling blocked, cancel restocks, driver permissions, delivery and cash, reports, CSV, manual order, mobile layouts): all passing. Not yet tested on Vercel with Neon.
+- **Tested** locally against Postgres 16 with a Playwright script (checkout, pop-up, confirm, overselling blocked, cancel restocks, driver permissions, delivery and cash, reports, CSV, manual order, mobile layouts): all passing. On 2026-11-24 the owner connected Neon; tested on the live site: checkout saved EV-1001 (a test order, since cancelled), pop-up, cancel, and all portal pages load.
 - Storefront pages moved to `app/(shop)/` so the portal has its own layout; URLs did not change.
 
 ## Still needed from the owner
